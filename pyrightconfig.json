@@ -1,0 +1,7 @@
+{
+    "executionEnvironments": [{
+        "root" : "./src"
+    }],
+    "extraPaths" : ["out/build"],
+    "pythonVersion" : "3.10"
+}

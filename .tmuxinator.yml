@@ -1,0 +1,6 @@
+name: extensionCC-dev
+
+windows:
+  - editor: $EDITOR
+  - term: echo 'COMMANDS:' && ls bin
+  - math: mcp math

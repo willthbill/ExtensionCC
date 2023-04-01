@@ -1,0 +1,3 @@
+directory=$1
+rm submission.zip
+zip -r submission.zip output/$directory

@@ -1,0 +1,5 @@
+/bin/time -v $@
+echo
+echo
+echo
+echo "$@"
