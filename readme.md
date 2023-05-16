@@ -1,3 +1,7 @@
+# CG:SHOP 2023 CHALLENGE CODE
+- code from the challenge and from benchmarks performed after the end of the challenge
+- will be cleaned up in later commits
+
 # Development environment
 ## Dependencies
 * git-lfs
