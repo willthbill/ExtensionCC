@@ -8,10 +8,7 @@
 #include "visibility.h"
 #include "intersection_predicates.h"
 
-// two nodes have an edge if their convex hull is in the polygon
-// CHGraph also contain many other datastructures, such as triangulation, intersection_predicates, visibility and polygon_graph
-
-class CHGraph {
+class VisibilityGraph {
 private:
 
     std::vector<int> get_neighbours_by_condition(int source, std::function<bool(int)> condition);
@@ -22,7 +19,7 @@ private:
 
     std::string get_cache_filename();
         
-    const std::string CACHE_DIR_START = "output/ch_graphs";
+    const std::string CACHE_DIR_START = "output/visibility_graphs";
 
     std::string CACHE_DIR;
 
@@ -46,8 +43,8 @@ public:
     VisibilityDataStructure visds;
     DualGraph dualgraph;
 
-    CHGraph(Polygon_with_holes _polygon, std::vector<Polygon> triangulation, std::string cache_directory); 
-    CHGraph();
+    VisibilityGraph(Polygon_with_holes _polygon, std::vector<Polygon> triangulation, std::string cache_directory); 
+    VisibilityGraph();
 
     void delete_datastructures();
 
@@ -59,7 +56,7 @@ public:
 
     void add_all_edges(); 
 
-    void add_edges_from_mapping(std::map<int,int>& mapper, CHGraph& other); 
+    void add_edges_from_mapping(std::map<int,int>& mapper, VisibilityGraph& other); 
 
     void add_fully_visible_bfs_edges_exact();
 
